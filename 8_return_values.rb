@@ -4,7 +4,7 @@
 # Eventually, I want to print the STANDARD DEVIATION of a set of numbers.
 # In other words, if I have a set of numbers like this:
 
-#     first_dataset = [93, 65, 87, 68, 2, 64, 36, 96, 45, 47]
+     first_dataset = [93, 65, 87, 68, 2, 64, 36, 96, 45, 47]
 
 # Then I want to be able to do something like this:
 
@@ -48,6 +48,9 @@ def mean(list_of_numbers)
   # ====================
   # Your code goes here.
   # ====================
+  count = list_of_numbers.length
+  mean = sum(list_of_numbers)/count
+  return mean.to_f
 end
 
 # VARIANCE
@@ -65,6 +68,15 @@ def variance(list_of_numbers)
   # ====================
   # Your code goes here.
   # ====================
+  mean = mean(list_of_numbers)
+  list_of_differences = []
+  list_of_numbers.each do |number|
+    difference_squared = (number-mean)*(number-mean)
+    list_of_differences.push(difference_squared)
+  end
+
+  return mean(list_of_differences)
+
 end
 
 # STANDARD DEVIATION
@@ -76,8 +88,10 @@ def standard_deviation(list_of_numbers)
   # ====================
   # Your code goes here.
   # ====================
+  return variance(list_of_numbers)**0.5
 end
 
+puts standard_deviation(first_dataset)
 
 # Finally, everything above allows us to do:
 
