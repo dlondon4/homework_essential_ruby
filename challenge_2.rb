@@ -33,10 +33,8 @@ principal_amount = 200000.0
 # ==============================================================
 # Your code goes here.
 # You shouldn't have to write code or change code anywhere else.
-# the_payment = pmt(bank["annual_rate"].to_f/12, number_of_monthly_payments, principal_amount)
 # loan_quotes.each ...
 loan_quotes.each do |bank|
-  # the_payment = pmt(bank["annual_rate"].to_f/12, 360, 200000.0)
   the_payment = pmt(bank["annual_rate"].to_f/12, number_of_monthly_payments, principal_amount)
   puts "The monthly payment from #{bank["bank"]} will be $#{the_payment.round(2)}."
 end
