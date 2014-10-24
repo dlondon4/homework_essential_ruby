@@ -91,14 +91,12 @@ def standard_deviation(list_of_numbers)
   return variance(list_of_numbers)**0.5
 end
 
-puts standard_deviation(first_dataset)
-
 # Finally, everything above allows us to do:
 
-# first_dataset = [93, 65, 87, 68, 2, 64, 36, 96, 45, 47]
-# stdev1 = standard_deviation(first_dataset)
-# puts "The standard deviation of the first dataset is #{stdev1.round(2)}."
+first_dataset = [93, 65, 87, 68, 2, 64, 36, 96, 45, 47]
+stdev1 = standard_deviation(first_dataset)
+puts "The standard deviation of the first dataset is #{stdev1.round(2)}."
 
-# second_dataset = [2, 9, 405, 562, 740, 133, 346, 509, 21, 93]
-# stdev2 = standard_deviation(second_dataset)
-# puts "The standard deviation of the second dataset is #{stdev2.round(2)}."
+second_dataset = [2, 9, 405, 562, 740, 133, 346, 509, 21, 93]
+stdev2 = standard_deviation(second_dataset)
+puts "The standard deviation of the second dataset is #{stdev2.round(2)}."
